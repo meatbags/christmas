@@ -1,0 +1,43 @@
+div, * {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: $black;
+  color: $white;
+  font-family: $fontStack;
+  font-size: $fontSize;
+  user-select: none;
+}
+
+a {
+  color: inherit;
+}
+
+#button-start, #button-question {
+  position: absolute;
+  z-index: 999;
+  top: $space;
+  left: 50%;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid $white;
+  @include padding(1, 0.75);
+
+  &#button-question {
+    left: auto;
+    right: $space;
+    transform: translate(0, 0);
+  }
+
+  &:active {
+    color: $black;
+    background: $white;
+  }
+}

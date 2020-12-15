@@ -1,0 +1,6 @@
+@mixin padding($x, $y) {
+  padding-top: $y * $space;
+  padding-bottom: $y * $space;
+  padding-left: $x * $space;
+  padding-right: $x * $space;
+}

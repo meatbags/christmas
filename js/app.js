@@ -2,7 +2,9 @@
 
 import Camera from './camera.js';
 import Loop from './loop.js';
+import Nav from './nav.js';
 import Renderer from './renderer.js';
+import Rotunda from './rotunda.js';
 import Scene from './scene.js';
 
 class App {
@@ -10,7 +12,9 @@ class App {
     this.modules = {};
     this.modules.camera = new Camera();
     this.modules.loop = new Loop();
+    this.modules.nav = new Nav();
     this.modules.renderer = new Renderer();
+    this.modules.rotunda = new Rotunda();
     this.modules.scene = new Scene();
 
     // bind modules

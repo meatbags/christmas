@@ -16,6 +16,10 @@ if (!in_array($ref, array('Isaac', 'Lily', 'Lauren', 'Virginia', 'Jim', 'Helen')
     <div class='wrapper'>
       <div class='wrapper__inner'>
         <div id='renderer-target'></div>
+        <div id='button-start'>
+          START PHENAKISTISCOPE
+        </div>
+        <a id='button-question' target='_blank' href='https://en.wikipedia.org/wiki/Phenakistiscope'>?</a>
       </div>
     </div>
   </body>

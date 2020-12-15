@@ -7,5 +7,32 @@ html, body {
 
 body {
   background: #111;
-  color: #fff; }
+  color: #fff;
+  font-family: monospace;
+  font-size: 16px;
+  user-select: none; }
+
+a {
+  color: inherit; }
+
+#button-start, #button-question {
+  position: absolute;
+  z-index: 999;
+  top: 8px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid #fff;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 8px;
+  padding-right: 8px; }
+  #button-start#button-question, #button-question#button-question {
+    left: auto;
+    right: 8px;
+    transform: translate(0, 0); }
+  #button-start:active, #button-question:active {
+    color: #111;
+    background: #fff; }
 
