@@ -12,7 +12,7 @@ class Rotunda {
     const geo = new THREE.SphereBufferGeometry(0.05, 3, 3);
     const mat = new THREE.MeshStandardMaterial({ color: 0xffffff });
     const mesh = new THREE.Mesh(geo, mat);
-    for (let i=0; i<10; i++) {
+    for (let i=0; i<1; i++) {
       const x = (Math.random() * 2 - 1) * 5;
       const y = (Math.random() * 2 - 1) * 5;
       const z = (Math.random() * 2 - 1) * 5;
@@ -30,7 +30,7 @@ class Rotunda {
         mesh.position.y = y + v.y * t;
         mesh.position.z = z + v.z * t;
       };
-      this.createAnimation(mesh, callback);
+      this.createAnimation(mesh, callback, 20);
     }
   }
 
@@ -40,8 +40,10 @@ class Rotunda {
     this.ref.scene.getScene().add(this.group);
   }
 
-  createAnimation(mesh, callback) {
-    for (let i=0; i<this.divisions; i++) {
+  createAnimation(mesh, callback, cycles) {
+    let lim = (cycles || 1) * this.divisions;
+
+    for (let i=0; i<lim; i++) {
       let t = i / this.divisions;
       callback(mesh, t);
       const clone = mesh.clone();
